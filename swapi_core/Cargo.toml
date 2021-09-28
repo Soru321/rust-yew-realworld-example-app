@@ -1,0 +1,31 @@
+[package]
+name = "swapi_core"
+version = "0.1.0"
+authors = ["Igor Steblii <xajik0@ggmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+# You should include "rlib" (the default crate type) otherwise your crate can't be used as a Rust library
+# which, among other things, breaks unit testing
+
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+reqwest = "*"
+tokio = "*"
+serde = "*"
+serde_json = "*"
+openssl = "*"
+#openssl-sys = "*"
+libc = "*"
+lazy_static = "1.4.0"
+
+
+# you can check the latest version here: https://crates.io/crates/yew
+# for web_sys
+yew = "*"
+
+# or for stdweb
+# yew = { version = "0.17", package = "yew-stdweb" }
+wasm-bindgen = "*"
